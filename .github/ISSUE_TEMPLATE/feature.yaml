@@ -1,0 +1,19 @@
+name: Feature
+description: File a feature request
+title: ""
+labels: [ "status:todo", "category:feature" ]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A concise description of the task
+    validations:
+      required: true
+  - type: input
+    id: estimated-time
+    attributes:
+      label: Estimated time
+      description: Estimated time in hours
+    validations:
+      required: true
