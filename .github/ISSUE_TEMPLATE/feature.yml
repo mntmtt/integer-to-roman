@@ -1,6 +1,6 @@
 name: Feature
 description: File a feature request
-title: ""
+title: "[feature] "
 labels: [ "status:todo", "category:feature" ]
 body:
   - type: textarea
