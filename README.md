@@ -3,6 +3,14 @@
 
 # integer-to-roman
 
+- Develop
+[![Coverage Status](https://coveralls.io/repos/github/mntmtt/integer-to-roman/badge.svg?branch=develop)](https://coveralls.io/github/mntmtt/integer-to-roman?branch=develop)
+[![CI](https://github.com/mntmtt/integer-to-roman/actions/workflows/build-and-test.yml/badge.svg?branch=develop)](https://github.com/mntmtt/integer-to-roman/actions/workflows/build-and-test.yml)
+
+- Main
+[![Coverage Status](https://coveralls.io/repos/github/mntmtt/integer-to-roman/badge.svg?branch=main)](https://coveralls.io/github/mntmtt/integer-to-roman?branch=main)
+[![CI](https://github.com/mntmtt/integer-to-roman/actions/workflows/build-and-test.yml/badge.svg?branch=main)](https://github.com/mntmtt/integer-to-roman/actions/workflows/build-and-test.yml)
+
 A basic Java utility to convert integer numbers to Roman numbers, featuring ASCII-arts 😎
 
 # Issue labels
