@@ -37,4 +37,17 @@ public class IntegerToRomanTest {
         assertEquals(expected, actual);
     }
 
+    static Stream<Arguments> testConvertFourToSixData() {
+        return Stream.of(Arguments.of("IV", 4), Arguments.of("V", 5),
+                Arguments.of("VI", 6));
+    }
+
+    @ParameterizedTest
+    @MethodSource("testConvertFourToSixData")
+    void testConvertFourToSix(String expected, int argument) {
+        final String actual = IntegerToRoman.convert(argument);
+
+        assertEquals(expected, actual);
+    }
+
 }
