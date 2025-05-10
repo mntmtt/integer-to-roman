@@ -31,6 +31,10 @@ public class RomanPrinter {
                 "ooooo        \n`888'        \n 888         \n 888"
                         + "         \n 888         \n 888"
                         + "       o \no888ooooood8 ");
+        charToAsciiArt.put('C',
+                "  .oooooo.   \n d8P'  `Y8b  "
+                        + "\n888          \n888          \n888          "
+                        + "\n`88b    ooo  \n `Y8bood8P'  ");
     }
 
     public static String print(int num) {

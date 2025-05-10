@@ -8,13 +8,13 @@ parent_dir = script_dir.parent
 output_file = parent_dir / "roman_ascii_art.csv"
 
 # 'Roman' font on patorjk.com
-fig = Figlet(font='roman')
+fig = Figlet(font='roman', width=1000)
 
 with open(output_file, "w", newline="") as file:
     writer = csv.writer(file)
     writer.writerow(["Number", "Roman Representation ('Roman' font from patorjk.com)"])
 
-    for i in range(1, 51):
+    for i in range(1, 101):
         roman_numeral = roman.toRoman(i)
         output = fig.renderText(roman_numeral)
         
