@@ -18,6 +18,11 @@ public class RomanPrinter {
         charToAsciiArt = new HashMap<>();
         charToAsciiArt.put('I',
                 "ooooo \n`888' \n 888  \n 888  \n 888  \n 888  \no888o ");
+        charToAsciiArt.put('V',
+                "oooooo     oooo \n `888.     .8'  "
+                        + "\n  `888.   .8'   \n   `888. .8'    "
+                        + "\n    `888.8'     \n     `888'"
+                        + "      \n      `8'       ");
     }
 
     public static String print(int num) {
@@ -30,7 +35,9 @@ public class RomanPrinter {
             for (char c : romanNumber.toCharArray()) {
                 result += charToAsciiArt.get(c).split("\n")[i];
             }
-            result += "\n";
+            if (i != (HEIGHT - 1)) {
+                result += "\n";
+            }
         }
         return result;
     }
