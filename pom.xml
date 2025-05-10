@@ -76,6 +76,13 @@
                 <plugin>
                     <artifactId>maven-jar-plugin</artifactId>
                     <version>3.4.2</version>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <mainClass>it.unipd.mtss.Main</mainClass>
+                            </manifest>
+                        </archive>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-install-plugin</artifactId>
@@ -104,14 +111,6 @@
                 <configuration>
                     <failsOnError>true</failsOnError>
                     <configLocation>checkstyle.xml</configLocation>
-                    <propertyExpansion>
-                        name1=Giuseppe
-                        lastname1=De Fina
-                        id1=2113187
-                        name2=Matteo
-                        lastname2=Mantoan
-                        id2=21010085
-                    </propertyExpansion>
                     <consoleOutput>true</consoleOutput>
                 </configuration>
                 <executions>
