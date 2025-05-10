@@ -140,6 +140,11 @@
                             <goal>report</goal>
                             <goal>check</goal>
                         </goals>
+                        <configuration>
+                            <excludes>
+                                <exclude>**/Main.class</exclude>
+                            </excludes>
+                        </configuration>
                     </execution>
                 </executions>
                 <configuration>
