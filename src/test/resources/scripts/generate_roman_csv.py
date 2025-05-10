@@ -6,7 +6,7 @@ script_dir = Path(__file__).resolve().parent
 parent_dir = script_dir.parent
 output_file = parent_dir / "roman_numerals.csv"
 
-def generate_roman_csv(start=1, end=500, output_file=output_file):
+def generate_roman_csv(start=1, end=1000, output_file=output_file):
     with open(output_file, mode="w", newline="") as file:
         writer = csv.writer(file)
         writer.writerow(["arabic", "roman"])

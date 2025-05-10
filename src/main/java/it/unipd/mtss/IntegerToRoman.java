@@ -14,14 +14,14 @@ public class IntegerToRoman {
      * @return the string representation of the roman number
      */
     public static String convert(int number) {
-        if (number <= 0 || number > 500) {
+        if (number <= 0 || number > 1000) {
             throw new IllegalArgumentException(
-                    "number should be > 0 and <= 500");
+                    "number should be > 0 and <= 1000");
         }
 
-        int[] values = {500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
-        String[] symbols = {"D", "CD", "C", "XC", "L", "XL", "X", "IX", "V",
-                "IV", "I"};
+        int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] symbols = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X",
+                "IX", "V", "IV", "I"};
 
         StringBuilder result = new StringBuilder();
 
