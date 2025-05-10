@@ -23,6 +23,10 @@ public class RomanPrinter {
                         + "\n  `888.   .8'   \n   `888. .8'    "
                         + "\n    `888.8'     \n     `888'"
                         + "      \n      `8'       ");
+        charToAsciiArt.put('X',
+                "ooooooo  ooooo \n `8888    d8'  \n   Y888..8P"
+                        + "    \n    `8888'     \n   .8PY888.    \n  d8'"
+                        + "  `888b   \no888o  o88888o ");
     }
 
     public static String print(int num) {
