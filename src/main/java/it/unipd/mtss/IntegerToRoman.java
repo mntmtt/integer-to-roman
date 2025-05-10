@@ -14,7 +14,7 @@ public class IntegerToRoman {
      * @return the string representation of the roman number
      */
     public static String convert(int number) {
-        if (number <= 0 || number > 10) {
+        if (number <= 0 || number > 20) {
             throw new IllegalArgumentException("number should be > 0 and <= 6");
         }
 
