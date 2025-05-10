@@ -9,20 +9,20 @@ import java.util.HashMap;
 
 public class RomanPrinter {
 
+    final static int HEIGHT = 7;
+
     final static String space = " ";
 
-    private static HashMap<String, String> charToAsciiArt;
+    private static HashMap<Character, String> charToAsciiArt;
     static {
         charToAsciiArt = new HashMap<>();
-        charToAsciiArt.put("I", """
-                ooooo
-                 888
-                 888
-                 888
-                 888
-                 888
-                o888o
-                """);
+        charToAsciiArt.put('I',
+                "ooooo \n`888' \n 888  \n 888  \n 888  \n 888  \no888o ");
+        charToAsciiArt.put('V',
+                "oooooo     oooo \n `888.     .8'  "
+                        + "\n  `888.   .8'   \n   `888. .8'    "
+                        + "\n    `888.8'     \n     `888'"
+                        + "      \n      `8'       ");
     }
 
     public static String print(int num) {
@@ -30,13 +30,15 @@ public class RomanPrinter {
     }
 
     private static String printAsciiArt(String romanNumber) {
-        return switch (romanNumber) {
-            case "I" -> charToAsciiArt.get("I");
-            case "II" ->
-                charToAsciiArt.get("I") + space + charToAsciiArt.get("I");
-            case "III" -> charToAsciiArt.get("I") + space
-                    + charToAsciiArt.get("I") + space + charToAsciiArt.get("I");
-            default -> "";
-        };
+        String result = "";
+        for (int i = 0; i < HEIGHT; i++) {
+            for (char c : romanNumber.toCharArray()) {
+                result += charToAsciiArt.get(c).split("\n")[i];
+            }
+            if (i != (HEIGHT - 1)) {
+                result += "\n";
+            }
+        }
+        return result;
     }
 }
