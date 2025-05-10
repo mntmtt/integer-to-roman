@@ -8,7 +8,7 @@ parent_dir = script_dir.parent
 output_file = parent_dir / "roman_ascii_art.csv"
 
 # 'Roman' font on patorjk.com
-fig = Figlet(font='roman')
+fig = Figlet(font='roman', width=1000)
 
 with open(output_file, "w", newline="") as file:
     writer = csv.writer(file)
