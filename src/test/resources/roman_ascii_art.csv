@@ -1,0 +1,7 @@
+Number,Roman Representation ('Roman' font from patorjk.com)
+1,"""ooooo \n`888' \n 888  \n 888  \n 888  \n 888  \no888o """
+2,"""ooooo ooooo \n`888' `888' \n 888   888  \n 888   888  \n 888   888  \n 888   888  \no888o o888o """
+3,"""ooooo ooooo ooooo \n`888' `888' `888' \n 888   888   888  \n 888   888   888  \n 888   888   888  \n 888   888   888  \no888o o888o o888o """
+4,"""ooooo oooooo     oooo \n`888'  `888.     .8'  \n 888    `888.   .8'   \n 888     `888. .8'    \n 888      `888.8'     \n 888       `888'      \no888o       `8'       """
+5,"""oooooo     oooo \n `888.     .8'  \n  `888.   .8'   \n   `888. .8'    \n    `888.8'     \n     `888'      \n      `8'       """
+6,"""oooooo     oooo ooooo \n `888.     .8'  `888' \n  `888.   .8'    888  \n   `888. .8'     888  \n    `888.8'      888  \n     `888'       888  \n      `8'       o888o """

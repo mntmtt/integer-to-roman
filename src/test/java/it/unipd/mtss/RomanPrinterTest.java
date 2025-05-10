@@ -7,31 +7,20 @@ package it.unipd.mtss;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 
 public class RomanPrinterTest {
 
     final String space = " ";
 
-    String expectedI = """
-            ooooo
-            `888'
-             888
-             888
-             888
-             888
-            o888o
-            """;
+    @ParameterizedTest
+    @CsvFileSource(resources = "/roman_ascii_art.csv", numLinesToSkip = 1)
+    void testPrint(int argument, String expected) {
+        expected = expected.replace("\\n", "\n").strip();
 
-    @Test
-    void testPrintOneToThree() {
-        String result1 = RomanPrinter.print(1);
-        String result2 = RomanPrinter.print(2);
-        String result3 = RomanPrinter.print(3);
-
-        assertEquals(expectedI, result1);
-        assertEquals(expectedI + space + expectedI, result2);
-        assertEquals(expectedI + space + expectedI + space + expectedI,
-                result3);
+        String actual = RomanPrinter.print(argument);
+        actual = "\"" + actual + "\"";
+        assertEquals(expected, actual);
     }
 }
