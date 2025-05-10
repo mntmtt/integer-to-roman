@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class IntegerToRomanTest {
 
     @ParameterizedTest
-    @CsvSource({"0", "-10", "1000", "1010"})
+    @CsvSource({"0", "-10", "1001", "1010"})
     void testConvertInvalidArguments(int invalidArgument) {
         assertThrows(IllegalArgumentException.class,
                 () -> IntegerToRoman.convert(invalidArgument));
