@@ -5,3 +5,7 @@ Number,Roman Representation ('Roman' font from patorjk.com)
 4,"""ooooo oooooo     oooo \n`888'  `888.     .8'  \n 888    `888.   .8'   \n 888     `888. .8'    \n 888      `888.8'     \n 888       `888'      \no888o       `8'       """
 5,"""oooooo     oooo \n `888.     .8'  \n  `888.   .8'   \n   `888. .8'    \n    `888.8'     \n     `888'      \n      `8'       """
 6,"""oooooo     oooo ooooo \n `888.     .8'  `888' \n  `888.   .8'    888  \n   `888. .8'     888  \n    `888.8'      888  \n     `888'       888  \n      `8'       o888o """
+7,"""oooooo     oooo ooooo ooooo \n `888.     .8'  `888' `888' \n  `888.   .8'    888   888  \n   `888. .8'     888   888  \n    `888.8'      888   888  \n     `888'       888   888  \n      `8'       o888o o888o """
+8,"""oooooo     oooo ooooo ooooo ooooo \n `888.     .8'  `888' `888' `888' \n  `888.   .8'    888   888   888  \n   `888. .8'     888   888   888  \n    `888.8'      888   888   888  \n     `888'       888   888   888  \n      `8'       o888o o888o o888o """
+9,"""ooooo ooooooo  ooooo \n`888'  `8888    d8'  \n 888     Y888..8P    \n 888      `8888'     \n 888     .8PY888.    \n 888    d8'  `888b   \no888o o888o  o88888o """
+10,"""ooooooo  ooooo \n `8888    d8'  \n   Y888..8P    \n    `8888'     \n   .8PY888.    \n  d8'  `888b   \no888o  o88888o """
