@@ -16,7 +16,7 @@ public class RomanPrinter {
         charToAsciiArt = new HashMap<>();
         charToAsciiArt.put("I", """
                 ooooo
-                 888
+                `888'
                  888
                  888
                  888

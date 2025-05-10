@@ -15,7 +15,7 @@ public class RomanPrinterTest {
 
     String expectedI = """
             ooooo
-             888
+            `888'
              888
              888
              888
