@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class IntegerToRomanTest {
 
     @ParameterizedTest
-    @CsvSource({"0", "-10", "1000", "1010"})
+    @CsvSource({"0", "-10", "1001", "1010"})
     void testConvertInvalidArguments(int invalidArgument) {
         assertThrows(IllegalArgumentException.class,
                 () -> IntegerToRoman.convert(invalidArgument));
@@ -32,6 +32,19 @@ public class IntegerToRomanTest {
     @ParameterizedTest
     @MethodSource("testConvertOneToThreeData")
     void testConvertOneToThree(String expected, int argument) {
+        final String actual = IntegerToRoman.convert(argument);
+
+        assertEquals(expected, actual);
+    }
+
+    static Stream<Arguments> testConvertFourToSixData() {
+        return Stream.of(Arguments.of("IV", 4), Arguments.of("V", 5),
+                Arguments.of("VI", 6));
+    }
+
+    @ParameterizedTest
+    @MethodSource("testConvertFourToSixData")
+    void testConvertFourToSix(String expected, int argument) {
         final String actual = IntegerToRoman.convert(argument);
 
         assertEquals(expected, actual);
