@@ -39,6 +39,9 @@ public class RomanPrinter {
                 "oooooooooo.   \n`888'   `Y8b  \n 888"
                         + "      888 \n 888      888 \n 888      "
                         + "888 \n 888     d88' \no888bood8P'   ");
+        charToAsciiArt.put('M', "ooo        ooooo \n`88."
+                + "       .888' \n 888b     d'888  \n 8 Y88. .P  888  "
+                + "\n 8  `888'   888  \n 8    Y     888  \no8o        o888o ");
     }
 
     public static String print(int num) {
