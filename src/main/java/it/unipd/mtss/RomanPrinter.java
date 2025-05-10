@@ -27,6 +27,10 @@ public class RomanPrinter {
                 "ooooooo  ooooo \n `8888    d8'  \n   Y888..8P"
                         + "    \n    `8888'     \n   .8PY888.    \n  d8'"
                         + "  `888b   \no888o  o88888o ");
+        charToAsciiArt.put('L',
+                "ooooo        \n`888'        \n 888         \n 888"
+                        + "         \n 888         \n 888"
+                        + "       o \no888ooooood8 ");
     }
 
     public static String print(int num) {
@@ -34,15 +38,15 @@ public class RomanPrinter {
     }
 
     private static String printAsciiArt(String romanNumber) {
-        String result = "";
+        StringBuilder resultBuilder = new StringBuilder();
         for (int i = 0; i < HEIGHT; i++) {
             for (char c : romanNumber.toCharArray()) {
-                result += charToAsciiArt.get(c).split("\n")[i];
+                resultBuilder.append(charToAsciiArt.get(c).split("\n")[i]);
             }
             if (i != (HEIGHT - 1)) {
-                result += "\n";
+                resultBuilder.append("\n");
             }
         }
-        return result;
+        return resultBuilder.toString();
     }
 }
