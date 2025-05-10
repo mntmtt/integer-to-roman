@@ -14,7 +14,7 @@ with open(output_file, "w", newline="") as file:
     writer = csv.writer(file)
     writer.writerow(["Number", "Roman Representation ('Roman' font from patorjk.com)"])
 
-    for i in range(1, 11):
+    for i in range(1, 21):
         roman_numeral = roman.toRoman(i)
         output = fig.renderText(roman_numeral)
         
