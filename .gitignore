@@ -72,3 +72,6 @@ nbdist/
 *.log
 hs_err_pid*
 
+# Python environments
+env/
+

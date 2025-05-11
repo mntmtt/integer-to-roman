@@ -5,7 +5,7 @@
 
     <groupId>it.unipd.mtss</groupId>
     <artifactId>roman-number</artifactId>
-    <version>0.1</version>
+    <version>1.0</version>
 
     <name>roman-number</name>
     <!-- FIXME change it to the project's website -->
@@ -45,6 +45,11 @@
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>0.8.13</version>
         </dependency>
+        <dependency>
+            <groupId>com.diffplug.spotless</groupId>
+            <artifactId>spotless-maven-plugin</artifactId>
+            <version>2.44.4</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -71,6 +76,13 @@
                 <plugin>
                     <artifactId>maven-jar-plugin</artifactId>
                     <version>3.4.2</version>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <mainClass>it.unipd.mtss.Main</mainClass>
+                            </manifest>
+                        </archive>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-install-plugin</artifactId>
@@ -99,14 +111,6 @@
                 <configuration>
                     <failsOnError>true</failsOnError>
                     <configLocation>checkstyle.xml</configLocation>
-                    <propertyExpansion>
-                        name1=Giuseppe
-                        lastname1=De Fina
-                        id1=2113187
-                        name2=Matteo
-                        lastname2=Mantoan
-                        id2=21010085
-                    </propertyExpansion>
                     <consoleOutput>true</consoleOutput>
                 </configuration>
                 <executions>
@@ -136,6 +140,11 @@
                             <goal>report</goal>
                             <goal>check</goal>
                         </goals>
+                        <configuration>
+                            <excludes>
+                                <exclude>**/Main.class</exclude>
+                            </excludes>
+                        </configuration>
                     </execution>
                 </executions>
                 <configuration>
@@ -156,6 +165,32 @@
                             </limits>
                         </rule>
                     </rules>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.diffplug.spotless</groupId>
+                <artifactId>spotless-maven-plugin</artifactId>
+                <version>2.44.4</version>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>apply</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <java>
+                        <eclipse>
+                            <file>${basedir}/eclipse-formatter.xml</file>
+                        </eclipse>
+                        <removeUnusedImports />
+                        <trimTrailingWhitespace />
+                        <endWithNewline />
+                        <includes>
+                            <include>src/**/*.java</include>
+                        </includes>
+                    </java>
                 </configuration>
             </plugin>
         </plugins>
